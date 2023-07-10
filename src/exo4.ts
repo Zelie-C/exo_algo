@@ -151,7 +151,7 @@ export function exo4(){
     const NB_VOTES_SECOND_TURN = NB_VOTES;
     let votesForSecondTurn = 0;
     
-const secondTurn = newQualifiedCandidates.map(e => ({...e, nbVotes: 0}))
+    const secondTurn = newQualifiedCandidates.map(e => ({...e, nbVotes: 0}))
 
     while (votesForSecondTurn < NB_VOTES_SECOND_TURN) {
         const indexVote = Math.floor(Math.random() * secondTurn.length)
@@ -159,5 +159,5 @@ const secondTurn = newQualifiedCandidates.map(e => ({...e, nbVotes: 0}))
         votesForSecondTurn++
     }
 
-    console.log("result seconde turn : ", secondTurn)
+    console.log("result second turn : ", secondTurn)
 }
