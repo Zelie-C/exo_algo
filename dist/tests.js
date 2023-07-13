@@ -22,4 +22,3 @@ function getAllDiceCombinations(dices) {
         return [diceCombi, diceCompletion];
     });
 }
-console.log('test fonction', getAllDiceCombinations(["vert", "rouge", "jaune"]));

@@ -114,6 +114,6 @@ function exo4() {
         secondTurn[indexVote].nbVotes++;
         votesForSecondTurn++;
     }
-    console.log("result seconde turn : ", secondTurn);
+    console.log("result second turn : ", secondTurn);
 }
 exports.exo4 = exo4;
