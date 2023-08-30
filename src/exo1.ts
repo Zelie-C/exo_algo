@@ -1,4 +1,4 @@
-export const exo1 = () => {
+//export const exo1 = () => {
     /*
     ## Exercice 1 - Les variables
 
@@ -9,7 +9,7 @@ export const exo1 = () => {
 
     */
 
-    const a = 5;
+    /*const a = 5;
     const b = 1;
 
     if(a > Math.PI) {
@@ -42,4 +42,4 @@ export const exo1 = () => {
     else {
         console.log('c n\'est ni 5, ni 6, ni 7');
     }
-};
+};*/

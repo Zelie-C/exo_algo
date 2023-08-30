@@ -1,4 +1,4 @@
-export function exo2(){
+/*export function exo2(){
     console.log('exo2')
     // const tableau = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
@@ -28,5 +28,5 @@ export function exo2(){
     }
 
     console.log("tableau doublé", tableauBis);
-    
-}
+
+}*/

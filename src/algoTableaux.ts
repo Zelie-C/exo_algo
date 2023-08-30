@@ -1,5 +1,5 @@
 
-const tableau = [2, 7, 12, 3];
+/*const tableau = [2, 7, 12, 3];
 
 function find(tab: number[], elementToFind: number){
     let i = 0;
@@ -74,7 +74,7 @@ function filterNbSupSix(tab: number[]){
     }
 
     return res
-    
+
 }
 
 function map(tab: number[], handler: (val: number, index: number) => number){
@@ -89,10 +89,10 @@ function map(tab: number[], handler: (val: number, index: number) => number){
 
 console.log('filtered', filterNbSupSix(tableau))
 console.log('sum', sum(tableau))
-console.log('incrementedTab', 
+console.log('incrementedTab',
     map(tableau, (value, index) => {
         return index + value - 2
-    }), 
+    }),
     tableau.map( (value, index) => index + value - 2)
 )
 
@@ -108,4 +108,4 @@ let sumBisBis = reduce(tableau, undefined, (acc, val, i) => {
     return acc + val
 })
 
-console.log('sum with reduce', sumBis, sumBisBis)
+console.log('sum with reduce', sumBis, sumBisBis)$*/

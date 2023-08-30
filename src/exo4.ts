@@ -1,4 +1,4 @@
-export function exo4(){
+/*export function exo4(){
     // ## Exercice 4 - Les élections
 
     // ```typescript
@@ -32,19 +32,19 @@ export function exo4(){
 
     // 1. ----------------------------------------------------------------------------------------
     const candidats = [
-        "lepeigne", 
-        "melangeons", 
-        "macreau", 
-        "varousselle", 
-        "paicvaissrelle", 
-        "poutoutout", 
+        "lepeigne",
+        "melangeons",
+        "macreau",
+        "varousselle",
+        "paicvaissrelle",
+        "poutoutout",
         "hidalgogo"
     ];
-    
+
     function getRandomCandidat(){
         return candidats[Math.floor(Math.random() * candidats.length)]
     }
-    
+
     const votes = [];
     const NB_VOTES = 1000;
 
@@ -59,7 +59,7 @@ export function exo4(){
         const indexCandidat = candidats.findIndex(val => val === element)
         results[indexCandidat]++;
     }
-    
+
     const votesByCandidates = results.map((val, i) => {
         return {
             nbVotes: val,
@@ -75,10 +75,10 @@ export function exo4(){
     let indexQualifiedToCompare = 2;
 
     while(
-        indexQualifiedToCompare < candidats.length && 
+        indexQualifiedToCompare < candidats.length &&
         votesByCandidates[indexQualifiedToCompare].nbVotes === votesByCandidates[1].nbVotes
     ){
-        indexQualifiedToCompare++;        
+        indexQualifiedToCompare++;
     }
 
     const qualifiedCandidates = votesByCandidates.slice(0, indexQualifiedToCompare);
@@ -98,13 +98,13 @@ export function exo4(){
         Math.floor(BUDGET_PAICVAISSRELLE / PRIX_ACHAT_VOTE),
         nbVotesLePeigne
     )
-    
+
     console.log(`Paicvessrelle peut acheter ${nbVotesLepeigneVersPaicvaissrelle} votes à lepeigne`);
-    
+
     const resultsAfterCheating = votesByCandidates.map(e => {
         if(e.candidat === "lepeigne"){
             return {
-                ...e, 
+                ...e,
                 nbVotes: e.nbVotes - nbVotesLepeigneVersPaicvaissrelle
             }
         }
@@ -114,7 +114,7 @@ export function exo4(){
                 nbVotes: e.nbVotes + nbVotesLepeigneVersPaicvaissrelle
             }
         }
-        
+
         return e
     })
 
@@ -126,10 +126,10 @@ export function exo4(){
     indexQualifiedToCompare = 2;
 
     while(
-        indexQualifiedToCompare < candidats.length && 
+        indexQualifiedToCompare < candidats.length &&
         resultsAfterCheating[indexQualifiedToCompare].nbVotes === resultsAfterCheating[1].nbVotes
     ){
-        indexQualifiedToCompare++;        
+        indexQualifiedToCompare++;
     }
 
     const newQualifiedCandidates = resultsAfterCheating.slice(0, indexQualifiedToCompare);
@@ -142,7 +142,7 @@ export function exo4(){
     // Si lepeigne ne pas au deuxième tour, elle démarre avec, au maximum les voix de lepeigne au premier tour.
 
     console.log('3. ------------------------------------------------------')
-    const nbVotesPossibles = Math.floor( 
+    const nbVotesPossibles = Math.floor(
         (BUDGET_PAICVAISSRELLE - nbVotesLepeigneVersPaicvaissrelle * PRIX_ACHAT_VOTE) / PRIX_ACHAT_VOTE
     )
     console.log("nb votes achetables encore :", nbVotesPossibles);
@@ -150,7 +150,7 @@ export function exo4(){
     const nbQualified = newQualifiedCandidates.length
     const NB_VOTES_SECOND_TURN = NB_VOTES;
     let votesForSecondTurn = 0;
-    
+
     const secondTurn = newQualifiedCandidates.map(e => ({...e, nbVotes: 0}))
 
     while (votesForSecondTurn < NB_VOTES_SECOND_TURN) {
@@ -160,4 +160,4 @@ export function exo4(){
     }
 
     console.log("result second turn : ", secondTurn)
-}
+}*/

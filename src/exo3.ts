@@ -1,10 +1,10 @@
-export function exo3(){
+/*export function exo3(){
     // On a un stock de foin qui contient 800kg de foin.
     // On a 2 moutons qui mangent 500g de foin par jour.
     // Un des mouton est transformé en gigot au bout de 1000 jours.
     // Combien de temps le stock de foin va-t-il durer ?
 
-    // Même exercice si le stock est de 20 kg 
+    // Même exercice si le stock est de 20 kg
     // Même exercice si le nombre de mouton est de 5.
     console.log("2 moutons et 800KG foin", getNbJourOfFood(800, 2));
     console.log("2 moutons et 20KG foin", getNbJourOfFood(20, 2));
@@ -28,4 +28,4 @@ function getNbJourOfFood(foodInKg: number, nbSheep: number){
     }
 
     return nbJour
-}
+}*/

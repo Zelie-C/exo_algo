@@ -1,4 +1,4 @@
-
+/*
 const NB_WAGONS = 10
 const PREMIER_WAGON = 3
 const VITESSE_INITIALE = 92
@@ -47,4 +47,4 @@ for (let index = 0; index < NB_VOYAGES; index++) {
     totalKmParcourus += getNbKmParcourus()
 }
 
-console.log('fin des voyages', totalKmParcourus, totalKmParcourus / NB_VOYAGES)
+console.log('fin des voyages', totalKmParcourus, totalKmParcourus / NB_VOYAGES)*/
