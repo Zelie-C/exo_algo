@@ -1,33 +1,25 @@
 "use strict";
-/*function getAllDiceCombinations(dices: any[]) {
-  const toCombine = new Array(dices.length).fill("").map((_, i) => i)
-  let combinations: any[] = []
-  let temp: any[] = []
-  let slent = Math.pow(2, toCombine.length) - 1
-
-  for (let i = 0; i < slent; i++) {
-    temp = []
-    for (var j = 0; j < toCombine.length; j++) {
-      if (i & Math.pow(2, j)) {
-        temp.push(toCombine[j])
-      }
+function factorielle(n) {
+    let result = 1;
+    for (let i = 1; i <= n; i++) {
+        result *= i;
     }
-
-    if (temp.length > 0) {
-      combinations.push(temp)
-    }
-  }
-
-  return combinations.map((combi) => {
-    const completion = toCombine.filter((index) => combi.indexOf(index) === -1)
-    const diceCombi = combi.map((e) => dices[e])
-    const diceCompletion = completion.map((e) => dices[e])
-    return [diceCombi, diceCompletion]
-  })
+    return result;
 }
-
-console.log('test fonction', getAllDiceCombinations(["vert", "rouge", "jaune"]))*/
-Object.defineProperty(exports, "__esModule", { value: true });
+factorielle(5);
+function isPalindrome(maChaine) {
+    let i = 0;
+    while (maChaine[i] === maChaine[maChaine.length - 1 - i] && i <= maChaine.length / 2) {
+        i++;
+    }
+    if (maChaine[i] != maChaine[maChaine.length - 1 - i]) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+isPalindrome("elle");
 const nomsPossibles = [
     "Amandine",
     "Benoit",
@@ -41,7 +33,6 @@ const nomsPossibles = [
     "Jérôme",
     "Karine"
 ];
-//const tableauEleves: string[] = new Array(16).map( nomsPossibles.forEach( nom => tableauEleves.push(nom)))
 //1. Créez un tableau d'élèves qui contient un nom aléatoire pour chaque élève.
 const nbrEleves = 16;
 const elevesArray = [];
@@ -50,20 +41,17 @@ for (let i = 0; i < nbrEleves; i++) {
     const nomAleatoire = nomsPossibles[indexAleatoire];
     elevesArray.push(nomAleatoire);
 }
-console.log(elevesArray);
+;
 //2. Créez un tableau de notes qui contient une note aléatoire entre 0 et 20 pour chaque élève.
 const notesArray = [];
 for (let i = 0; i < elevesArray.length; i++) {
     notesArray.push(Math.floor(Math.random() * 21));
 }
-console.log(notesArray);
+;
 //3. Créez une procédure qui affiche le nom de l'élève et sa note.
-function quelleNote(eleves, notes) {
-    for (let i = 0; i < eleves.length; i++) {
-        console.log(`L'élève ${eleves[i]} a eu la note de ${notes[i]}`);
-    }
+for (let i = 0; i < elevesArray.length; i++) {
+    console.log(`${elevesArray[i]} a eu la note de ${notesArray[i]}`);
 }
-quelleNote(elevesArray, notesArray);
 //4. Créez une procédure qui affiche un nom d'élève et la note moyenne des élèves qui portent ce prénom.
 function calculerMoyenne(prenom) {
     const noteEleves = [];
@@ -91,6 +79,7 @@ function afficherNomEtMoyenne(prenom) {
         return failMessage;
     }
 }
+afficherNomEtMoyenne("Machin");
 //5. Créez une fonction qui retourne la note maximale de la classe.
 function getNoteMax(tableau) {
     let noteMax = 0;
@@ -129,18 +118,19 @@ function nbrElevesPlusDeMoyenne(tableau) {
         }
     }
     let nbrBonsEleves = bonsEleves.length;
-    console.log(`${nbrBonsEleves} élèves ont plus que la moyenne`);
-    return bonsEleves.length;
+    return nbrBonsEleves;
 }
 nbrElevesPlusDeMoyenne(notesArray);
 //9. Créez une procédure qui affiche pour chaque note, le nombre d'élèves qui ont cette note.
-let elevesMemeNote = [];
-for (let i = 0; i < notesArray.length; i++) {
-    if (notesArray[i] === elevesArray[i]) {
-        elevesMemeNote.push(elevesArray[i]);
-        let nbrElevesMemeNote = elevesMemeNote.length;
-        console.log(`${nbrElevesMemeNote} élèves ont eu ${notesArray}`);
+for (let i = 0; i <= 20; i++) {
+    let elevesMemeNote = [];
+    for (let j = 0; j < notesArray.length; j++) {
+        if (notesArray[j] === i) {
+            elevesMemeNote.push(elevesArray[j]);
+        }
     }
+    let nbrElevesMemeNote = elevesMemeNote.length;
+    console.log(`${nbrElevesMemeNote} élèves ont eu la note de ${i}`);
 }
 //10. Créez une procédure qui affiche le nom de l'élève qui a la meilleure note.
 let noteMaximale = getNoteMax(notesArray);
